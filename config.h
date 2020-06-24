@@ -161,8 +161,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD("st -e sudo nmtui") },
 	/* { ControlMask,			XK_w,		spawn,		SHCMD("$BROWSER") }, */
 	{ MODKEY,			XK_e,		spawn,		SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
-	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("st -e abook") },
-	{ Mod1Mask|ControlMask,		XK_e,		spawn,		SHCMD("emacsclient -c -a ''") },
+	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("abooklaunch") },
+	{ Mod1Mask|ControlMask,		XK_e,		spawn,		SHCMD("emacs") },
 	{ MODKEY,			XK_c,		spawn,		SHCMD("st -e calcurse -D ~/.config/calcurse") },
 	{ MODKEY,			XK_r,		spawn,		SHCMD("st -e lf") },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("st -e htop") },
