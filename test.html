@@ -1,0 +1,22 @@
+<h1 id="lukes-build-of-dwm">Luke’s build of dwm</h1>
+<h2 id="faq">FAQ</h2>
+<blockquote>
+<p>What are the bindings?</p>
+</blockquote>
+<p>This is suckless, mmmbud, the source code is the documentation! Check out <a href="config.h">config.h</a>.</p>
+<p>Okay, okay, actually I keep a readme in <code>larbs.mom</code> for my whole system, including the binds here. Press <code>super+F1</code> to view it in dwm (zathura is required for that binding). I haven’t kept <code>man dwm</code>/<code>dwm.1</code> updated though. PRs welcome on that, lol.</p>
+<h2 id="patches-and-features">Patches and features</h2>
+<ul>
+<li>Clickable statusbar with my build of <a href="https://github.com/lukesmithxyz/dwmblocks">dwmblocks</a>.</li>
+<li>Reads xresources colors/variables (i.e. works with <code>pywal</code>, etc.).</li>
+<li>scratchpad: Accessible with mod+shift+enter.</li>
+<li>New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys <code>super+(shift+)t/y/u/i</code>.</li>
+<li>True fullscreen (<code>super+f</code>) and prevents focus shifting.</li>
+<li>Windows can be made sticky (<code>super+s</code>).</li>
+<li>stacker: Move windows up the stack manually (<code>super-K/J</code>).</li>
+<li>shiftview: Cycle through tags (<code>super+g/;</code>).</li>
+<li>vanitygaps: Gaps allowed across all layouts.</li>
+<li>swallow patch: if a program run from a terminal would make it inoperable, it temporarily takes its place to save space.</li>
+</ul>
+<h2 id="please-install-libxft-bgra">Please install <code>libxft-bgra</code>!</h2>
+<p>This build of dwm does not block color emoji in the status/info bar, so you must install <a href="https://aur.archlinux.org/packages/libxft-bgra/">libxft-bgra</a> from the AUR, which fixes a libxft color emoji rendering problem, otherwise dwm will crash upon trying to render one. Hopefully this fix will be in all libxft soon enough. # dwm</p>
