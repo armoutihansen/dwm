@@ -11,7 +11,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=16:antialias=true:autohint=true"  };
+static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=18:antialias=true:autohint=true"  };
 static char dmenufont[]             = "monospace:size=10";
 static const char col_gray1[]       = "#292d3e";
 static const char col_gray2[]       = "#444444";
@@ -167,10 +167,10 @@ static Key keys[] = {
 	/* { ControlMask,			XK_w,		spawn,		SHCMD("$BROWSER") }, */
 	{ MODKEY,			XK_e,		spawn,		SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("abooklaunch") },
-	{ Mod1Mask|ControlMask,		XK_e,		spawn,		SHCMD("emacs") },
+	{ Mod1Mask|ControlMask,		XK_e,		spawn,		SHCMD("emacsclient -c -a ''") },
 	{ MODKEY,			XK_c,		spawn,		SHCMD("st -e calcurse -D ~/.config/calcurse") },
 	{ MODKEY,			XK_r,		spawn,		SHCMD("st -e lf") },
-	{ MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("st -e htop") },
+	{ MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("emacsclient -c -a '' --eval '(dired nil)'") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
 	{ MODKEY,			XK_z,		setlayout,	{.v = &layouts[2]} }, /* spiral */
@@ -223,7 +223,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_n,		spawn,		SHCMD("st -e nvim -c VimwikiIndex") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_v,		spawn,		SHCMD("st -e nvim") },
-	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("st -e actconda") },
+	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("emacsclient -c -a ''") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },
